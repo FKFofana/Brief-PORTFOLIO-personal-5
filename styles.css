@@ -1,0 +1,560 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styles généraux */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #ff6f61ff;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 10px 0;
+    box-shadow: 0 4px 2px -2px gray;
+    display: flex; /* Nécessaire pour utiliser justify-content */
+    justify-content: center; /* Centre les éléments horizontalement */
+
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #FF6F61; /* Couleur de fond */
+    
+}
+
+.nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    text-align: center;
+    
+}
+
+.nav-list li {
+    margin: 0 15px;
+    display: inline;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: white;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin: 4px 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 3px; /* Ajustez selon la hauteur de votre menu */
+        left: 0;
+        background-color: #FF6F61;
+    }
+        }
+    
+
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+
+/* Ajoutez un padding supérieur au contenu principal pour éviter que le contenu ne soit masqué par le menu */
+main {
+    padding-top: 70px; /* Ajustez en fonction de la hauteur de votre menu */
+}
+
+
+/* Styles pour la section d'introduction */
+.intro-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0px;
+    padding: 40px 20px;
+    background-color: #ffffff;
+    gap: 40px;
+}
+
+.intro-text {
+    flex: 1;
+    text-align: left;
+}
+
+.small-text {
+    font-size: 1.2em;
+    margin: 0;
+    color: #000000;
+}
+
+.medium-text {
+    font-size: 2.2em;
+    margin: 10px 0;
+    font-family: 'Great Vibes', cursive;
+    font-weight: bold;
+    color: #000000;
+}
+
+.large-text {
+    font-size: 2em;
+    font-weight: bold;
+    color: #ff6f61ff;
+}
+
+.intro-image {
+    flex: 1;
+    text-align: right;
+}
+
+.intro-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Styles pour la section À propos de moi */
+.about-section {
+    background-color: #ff6f61ff;
+    color: #f4f4f4;
+    padding: 40px 20px;
+    border-radius: 5px;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.about-image {
+    flex: 1;
+    text-align: left;
+}
+
+.about-image img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.about-text {
+    flex: 2;
+    text-align: justify;
+}
+
+.section-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+.section-titl {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+
+    text-align: center; /* Ajoutez cette ligne pour centrer le titre */
+}
+.download-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #ff6f61ff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1em;
+    text-decoration: none;
+}
+
+.download-button i {
+    margin-right: 5px;
+}
+
+.download-button:hover {
+    background-color: #ffe6e1;
+}
+
+/* Pour les icônes, ajoutez la bibliothèque Font Awesome dans le <head> du HTML */
+
+
+
+
+section {
+    margin: 20px 0;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+}
+
+/* Styles pour les cartes */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Styles pour le footer */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #ff6f61ff;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+
+/* Styles pour la section À Propos */
+.about-section {
+    background-color: #ff6f61ff;
+    color: #f4f4f4;
+    padding: 40px 20px;
+    text-align: center; /* Centrer le titre */
+}
+
+
+.about-section h3 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Espacement entre l'image et le texte */
+}
+
+
+.about-image {
+    flex: 1; /* Permet à l'image de prendre de l'espace */
+}
+
+
+.about-image img {
+    max-width: 100%; /* S'assure que l'image ne déborde pas */
+    border-radius: 8px; /* Arrondir les bords de l'image */
+}
+
+
+.about-text {
+    flex: 2; /* Le texte prend plus d'espace */
+    text-align: justify; /* Justifie le texte */
+}
+
+
+.about-text button {
+    margin-top: 20px; /* Espace au-dessus du bouton */
+    padding: 10px 20px; /* Espacement interne du bouton */
+    background-color: #ffffff; /* Couleur de fond du bouton */
+    color: #ff6f61ff; /* Couleur du texte du bouton */
+    border: none; /* Enlever la bordure */
+    border-radius: 5px; /* Arrondir les bords du bouton */
+    cursor:
+}
+ /* Styles pour la section Compétences */
+#skills {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.section-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+/* Styles pour le slider */
+.skills-slider {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px;
+    scroll-behavior: smooth;
+}
+
+.skills-slider::-webkit-scrollbar {
+    display: none; /* Masquer la barre de défilement */
+}
+
+.slide {
+    min-width: 200px;
+    background-color: #ff6f61ff;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    flex-shrink: 0;
+}
+/* Styles pour la section Contactez-moi */
+#contact {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.section-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+/* Styles pour le formulaire de contact */
+.contact-form-container {
+    display: flex;
+    justify-content: flex-start; /* Positionner à gauche */
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #FAEBD7; /* Couleur saumon très clair */
+    border-radius: 5px;
+}
+
+.contact-form {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.submit-button {
+    background-color: #ff6f61ff; /* Couleur saumon */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.submit-button:hover {
+    background-color: #8360c3; /* Assombrir légèrement au survol */
+}
+/* Styles responsives */
+@media (max-width: 1200px) {
+    .intro-section {
+        flex-direction: column; /* Empile les éléments */
+        align-items: center; /* Centre les éléments */
+    }
+
+    .intro-image {
+        text-align: center; /* Centre l'image */
+        margin-top: 20px; /* Espace au-dessus de l'image */
+    }
+
+    .about-content {
+        flex-direction: column; /* Empile les éléments */
+        align-items: center; /* Centre les éléments */
+    }
+
+    .about-image {
+        margin-bottom: 20px; /* Espace en bas de l'image */
+    }
+
+    .about-text {
+        text-align: center; /* Centre le texte */
+    }
+
+    .card-container {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Réduit la taille des colonnes */
+    }
+
+    .skills-slider {
+        flex-direction: column; /* Empile les éléments dans le slider */
+        align-items: center; /* Centre les éléments */
+    }
+
+    .slide {
+        min-width: 80%; /* Réduit la largeur minimale pour les petits écrans */
+    }
+
+    .contact-form-container {
+        flex-direction: column; /* Empile les éléments du formulaire */
+        align-items: center; /* Centre les éléments */
+    }
+
+    .form-group {
+        width: 100%; /* Prend toute la largeur */
+    }
+}
+
+/* Styles pour les écrans plus petits */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column; /* Empile les éléments du header */
+    }
+
+    nav ul {
+        flex-direction: column; /* Empile les éléments de la navigation */
+        align-items: center; /* Centre les éléments de la navigation */
+    }
+
+    nav ul li {
+        margin-bottom: 10px; /* Espace entre les éléments de navigation */
+    }
+}
+/* Styles pour le menu burger */
+.menu-toggle {
+    display: none; /* Caché par défaut */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin: 4px;
+    transition: 0.3s;
+}
+
+/* Styles pour les petits écrans */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex; /* Montre le bouton burger sur les petits écrans */
+    }
+
+    .nav-list {
+        display: none; /* Cache le menu par défaut */
+        flex-direction: column; /* Dispose les éléments en colonne */
+        width: 100%;
+        background-color: #ff6f61ff; /* Couleur d'arrière-plan pour le menu */
+        position: absolute; /* Positionne le menu de manière absolue */
+        top: 60px; /* Ajustez selon la hauteur de l'en-tête */
+        left: 0;
+        z-index: 1000;
+    }
+
+    .nav-list.show {
+        display: flex; /* Affiche le menu lorsque activé */
+    }
+
+    .nav-list li {
+        padding: 10px 0; /* Espacement pour les éléments de menu */
+    }
+}
+/* Styles pour les cartes */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.card img {
+    max-width: 100%; /* Rend l'image responsive */
+    height: auto; /* Maintient le ratio */
+}
+
+/* Styles pour la section Compétences */
+#skills {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.section-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+/* Styles pour le conteneur des compétences */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Ajustement pour remplir l'espace disponible */
+    gap: 20px; /* Espacement entre les éléments */
+    padding: 0 10px; /* Espacement horizontal pour éviter les débordements */
+}
+
+/* Styles pour chaque compétence */
+.slide {
+    background-color: #ff6f61ff; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    padding: 20px; /* Espacement interne */
+    border-radius: 5px; /* Coins arrondis */
+    text-align: center; /* Centre le texte */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    transition: background-color 0.3s; /* Transition pour l'effet de survol */
+    margin: 10px 0; /* Ajoute un espace en haut et en bas */
+}
+
+.slide:hover {
+    background-color: #e55b55; /* Couleur de fond au survol */
+}
+
+/* Styles pour les petits écrans */
+@media (max-width: 768px) {
+    .skills-container {
+        grid-template-columns: 1fr; /* Une seule colonne pour les petits écrans */
+    }
+
+    .slide {
+        margin: 10px 0; /* Ajoute de l'espace entre les blocs */
+    }
+}
